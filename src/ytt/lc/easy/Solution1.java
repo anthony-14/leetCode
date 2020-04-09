@@ -1,5 +1,8 @@
 package ytt.lc.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Description: 两数之和
  * @author yindb
@@ -35,9 +38,18 @@ public class Solution1
         // }
 
         /*
-        Solution2：hashMap存储遍历后计算出的差值，
+        Solution2：hashMap存储遍历后计算出的差值和数组下标，后续循环比对匹配差值
          */
-
+        Map<Integer, Integer> map = new HashMap<>(nums.length);
+        for (int i = 0; i < nums.length; i++)
+        {
+            int key = target - nums[i];
+            if (map.containsKey(key))
+            {
+                return new int[]{map.get(key), i};
+            }
+            map.put(key, i);
+        }
         throw new IllegalArgumentException("unsolvable");
     }
 }
