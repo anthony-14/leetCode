@@ -1,4 +1,4 @@
-# LeetCodeY
+# LeetCode
 leetcode刷题用，尽量每天搞一题
 
 随机记录一些解题过程和想法，希望可以通过这些过程来提升自己
